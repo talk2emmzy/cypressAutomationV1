@@ -29,8 +29,15 @@ describe('Assertions in Cypress', () => {
     .and('exist')
 
     cy.get("input[placeholder='Username']").type('Admin')
-    //verify that the input character
+    //verify that the input character is correct
     cy.get("input[placeholder='Username']").should('have.value','Admin')
+
+    cy.get("input[placeholder='Password']").type('Admin')
+    //verify that the input character is correct
+    cy.get("input[placeholder='Password']").should('have.value','admin123')
+
+    cy.get('.oxd-button').click
+
 
   })
 
@@ -43,7 +50,7 @@ describe('Assertions in Cypress', () => {
     cy.get("input[placeholder='Password']").type('admin123')
     cy.get('.oxd-button').click
 
-    let expectedName="john CollingsBoyle"; //store the name in a string
+    let expectedName="Paul Collings"; //store the name in a string
     
     cy.get(".oxd-userdropdown-name").then( (x)=>{
 
@@ -56,7 +63,6 @@ describe('Assertions in Cypress', () => {
           assert.equal(actualName,expectedName) //here we compare the actual name against the expected name(Positive Assertion)
           assert.notEqual(actualName,expectedName) //here if actual name is not equal to expected test should pass, cetris paribus (Negative Assertion)
           
-
     })
 
 

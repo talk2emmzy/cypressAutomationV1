@@ -2,7 +2,7 @@
 
 describe('Login Page Test', function () {
 
-    it ('verify app url is lunched', function (){
+    it ('verify app url is lunched - Implicit Assertions', function (){
 
         cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
         
@@ -18,7 +18,14 @@ describe('Login Page Test', function () {
         cy.get("button[type='submit']").click()
         cy.get('.oxd-userdropdown-name').should('contain','Paul Collings')
 
+    }) 
 
+
+    it ('verify app url is lunched - Implicit Assertions', function (){
+
+        cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+        
+        
 
     }) 
 
