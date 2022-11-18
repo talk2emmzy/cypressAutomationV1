@@ -4,7 +4,7 @@ describe('Login Page Test', function () {
 
     it ('verify app url is lunched - Implicit Assertions', function (){
 
-        cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+        cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login' , { timeout: 100000 })
         
         cy.url().should('not.contain','fhghgsghsgshf') // Negative Test
         .and('contain','opensource-demo.orangehrmlive.com') //Positive Test
@@ -23,7 +23,7 @@ describe('Login Page Test', function () {
 
     it ('verify app url is lunched - Implicit Assertions', function (){
 
-        cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+        cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login' , { timeout: 100000 })
         
         
 
